@@ -25,7 +25,7 @@
 
         <xpath expr="//nav[@id='oe_main_menu_navbar']" position="replace">
 
-            <t t-set="body_classname" t-value="'drawer drawer--left'" />
+            <t t-set="body_classname" t-value="'drawer drawer--left o_web_client'" />
 
             <header role="banner">
                 <nav id="odooAppDrawer" class="app-drawer-nav drawer-nav" role="navigation">
