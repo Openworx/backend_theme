@@ -59,13 +59,37 @@
 
 // =========================================
 // Make formwidth relative to screen
-.openerp .oe_form_sheet_width {
-    max-width: 90%;
+
+.o_form_view .o_form_sheet_bg .o_form_sheet {
+    max-width: 90% !important;
 }
+
+
+// Kanban
+
+//Project
+.o_kanban_view.o_kanban_dashboard.o_project_kanban .o_project_kanban_boxes .o_project_kanban_box:nth-child(2n+1) {
+    background-color: @brand-primary !important;
+    }
+
+// Search filter
+
+.o_searchview .o_searchview_facet .o_searchview_facet_label {
+    background-color: @brand-primary;
+    }
+
+
+.o_primary {
+    color: @brand-primary;
+    }
+
+.o_kanban_view.o_kanban_dashboard.o_salesteam_kanban .o_sales_dashboard > div > table > tbody > tr > td.o_main {
+    background-color: @brand-primary !important;
+    }
 
 // Input field
 
-.openerp input, .openerp textarea, .openerp select, .openerp .oe_formview.oe_form_editable .o_form_field_many2manytags {
+input[type="text"], input[type="password"], input[type="number"], textarea, select, .o_form_view.o_form_editable .o_form_field_many2manytags {
     border: 0;
     border-radius: 0;
     border-bottom: 1px solid #ccc;
