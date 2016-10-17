@@ -89,7 +89,10 @@
 
 // Input field
 
-input[type="text"], input[type="password"], input[type="number"], textarea, select, .o_form_view.o_form_editable .o_form_field_many2manytags {
+input[type="text"], input[type="password"], input[type="number"],
+textarea, select, .o_form_view.o_form_editable .o_form_field_many2manytags,
+.o_searchview
+{
     border: 0;
     border-radius: 0;
     border-bottom: 1px solid #ccc;
@@ -98,6 +101,12 @@ input[type="text"], input[type="password"], input[type="number"], textarea, sele
 .o_web_client input:focus, .o_web_client textarea:focus, .o_web_client select:focus {
     outline: none;
 	border-bottom: 2px solid @brand-info;
+}
+
+// Control panel
+
+.breadcrumb {
+    background-color: transparent;
 }
 
 // Explorer 11 fix to use fullscreen
