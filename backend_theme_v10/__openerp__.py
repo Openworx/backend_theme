@@ -3,15 +3,15 @@
 # License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl.html).
 
 {
-    "name": "V10c Backend Theme",
+    "name": "Material/United Backend Theme",
     "summary": "Odoo 10.0 community backend theme"
                "web",
     "version": "10.0.1.0.0",
-    "category": "Website",
+    "category": "Themes/Backend",
     "website": "http://www.openworx.nl",
 	"description": """
-Backend theme for Odoo 10.0 community edition.
-The app dashboard is based on the module web_responsive from LasLabs Inc and the theme on Bootstrap United.
+		Backend theme for Odoo 10.0 community edition.
+		The app dashboard is based on the module web_responsive from LasLabs Inc and the theme on Bootstrap United.
     """,
 	'images':[
         'images/screen.png'
