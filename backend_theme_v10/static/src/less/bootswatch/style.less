@@ -66,6 +66,16 @@
     max-width: 90% !important;
 }
 
+// Darker background
+.o_form_view .o_form_sheet_bg {
+    background-color: #8f8f8f !important;
+    background-image: none !important;
+    border: 0 none !important;
+}
+
+.o_web_client > .o_main .o_main_content {
+    background-color: #8f8f8f;
+}
 
 // Kanban
 
@@ -114,6 +124,63 @@ textarea, select, .o_form_view.o_form_editable .o_form_field_many2manytags,
 // Make lookup button background transparent
 .o_form_view .o_form_field.o_form_field_many2one .o_external_button {
     background-color: transparent;
+}
+
+// Button header
+.o_form_view > header {
+    background-color: #ededed;
+    background-image: none;
+    border-bottom: 1px solid #cacaca;
+}
+
+.o_form_view > header {
+    padding-left: 14px;
+    padding-top: 2px;
+	padding-bottom: 2px;
+}
+
+// Status bar
+
+.o_form_view ul.oe_form_status li, .o_form_view ul.oe_form_status_clickable li {
+  background-image: linear-gradient(to bottom, #ededed, #ededed) !important;
+}
+
+.o_form_view ul.oe_form_status li > .arrow, .o_form_view ul.oe_form_status_clickable li > .arrow {
+  margin-left: 5px !important;
+}
+
+.o_form_view ul.oe_form_status li > .arrow span, .o_form_view ul.oe_form_status_clickable li > .arrow span {
+  margin-left: -20px !important;
+  box-shadow: 2px 0px 1px rgba(255, 255, 255, 0.2), inset -3px 3px 0px rgba(0, 0, 0, 0.2) !important;
+  background-color: #ededed !important;
+  background: -moz-linear-gradient(135deg, #ededed, #ededed) !important;
+  background: -o-linear-gradient(135deg, #ededed, #ededed) !important;
+  background: -webkit-gradient(linear, left top, right bottom, from(#ededed), to(#ededed)) !important;
+  background: -ms-linear-gradient(top, #ededed, #ededed) !important;
+  -moz-border-radius: 0px !important;
+  -webkit-border-radius: 0px !important;
+  border-radius: 0px !important;
+
+}
+
+.o_form_view ul.oe_form_status li.oe_active > .arrow span, .o_form_view ul.oe_form_status_clickable li.oe_active > .arrow span {
+  box-shadow: 2px 0px 1px rgba(255, 255, 255, 0.2), inset -3px 3px 0px @brand-info !important;
+  background-color: #ededed !important;
+  background: -moz-linear-gradient(135deg, #ededed, #ededed) !important;
+  background: -o-linear-gradient(135deg, #ededed, #ededed) !important;
+  background: -webkit-gradient(linear, left top, right bottom, from(#ededed), to(#ededed)) !important;
+  background: -ms-linear-gradient(top, #ededed, #ededed) !important;
+}
+
+
+.o_form_view ul.oe_form_status li.oe_active > .label, .o_form_view ul.oe_form_status_clickable li.oe_active > .label {
+  color: @brand-info !important;
+  font-weight: bold;
+  text-shadow: 0 1px 1px #ededed !important;
+}
+
+.o_form_view ul.oe_form_status li:first-child > .label, .o_form_view ul.oe_form_status_clickable li:first-child > .label {
+  border-left: 0px solid #cacaca  !important;
 }
 
 
