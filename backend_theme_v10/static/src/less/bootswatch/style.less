@@ -16,6 +16,16 @@
 	font-family: @font-family-sans-serif;
 }
 
+// Get rid of purple fontcolor
+
+body a {
+	color: @brand-primary;
+
+	&:active, &:focus, &:hover {
+		outline: none;
+	}
+}
+
 
 .o_control_panel .breadcrumb > li > a {
     color: @brand-primary;
@@ -32,7 +42,19 @@
 .nav-tabs > li > a {
     color: @brand-primary;
 }
-	
+
+.o_web_settings_dashboard .o_web_settings_dashboard_col .o_web_settings_dashboard_planner .o_web_settings_dashboard_progress_title {
+    color: @brand-primary !important
+}
+
+.o_calendar_container .o_calendar_sidebar_container .ui-datepicker table .ui-state-active {
+    background: @brand-primary none repeat scroll 0 0 !important;
+	color: #ffffff !important;
+}
+
+.o_calendar_container .o_calendar_sidebar_container .ui-datepicker table .ui-state-default {
+    color: @brand-primary !important;
+}
 
 // Navbar =========================================
 #oe_main_menu_navbar {
@@ -77,19 +99,22 @@
 //}
 
 // =========================================
-// Make formwidth relative to screen
+// Make formwidth wider to screen
 
 .o_form_view .o_form_sheet_bg .o_form_sheet {
-    max-width: 90% !important;
+	max-width: 1200px;
 }
 
 // Darker background
 .o_form_view .o_form_sheet_bg {
-    background-color: #8f8f8f !important;
-    background-image: none !important;
-    border: 0 none !important;
+    background-color: #8f8f8f;
+    background-image: none;
+    border: 0 none;
 }
 
+.o_web_client .oe-view-manager-content {
+    background-color: #8f8f8f;
+}
 .o_web_client > .o_main .o_main_content {
     background-color: #8f8f8f;
 }
