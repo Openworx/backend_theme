@@ -18,7 +18,7 @@
 
 a.navbar-collapse.collapse {
     @media (min-width: @screen-sm) {
-        padding-bottom: @app-drawer-navbar-padding-vertical;
+        padding-bottom: @app-drawer-navbar-padding-vertical + 2px; // Make the app drawer hover full height
         padding-top: @app-drawer-navbar-padding-vertical;
     }
 }
@@ -51,8 +51,33 @@ a.navbar-collapse.collapse {
 }
 
 .app-name {
-	color: white;
+    color: white;
     font-size: 22px;
     font-weight: 500;
     margin-right: 25px;
+    margin-left: 3px;
+    line-height: @app-name-line-height;
+}
+
+.navbar-header:hover {
+    @media (min-width: @screen-xs-max) {
+        background-color: #22527b;
+    }
+}
+
+.navbar-toggle {
+    margin-right: 0px;
+    color: #fff;
+}
+
+.navbar-default .navbar-toggle {
+    border-color: transparent;
+}
+
+.dropdown-menu {
+    text-align: center;
+
+    @media (min-width: @screen-xs-max) {
+        text-align: left;
+    }
 }

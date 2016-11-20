@@ -6,7 +6,7 @@
     background-color: @dropdown-bg;
     border: 0px solid @dropdown-fallback-border; // IE8 fallback
     border: 0px solid @dropdown-border;
-	border-radius: 0px !important;
+    border-radius: 0px !important;
 //    -webkit-border-radius: @border-radius-base;
 //    -moz-border-radius: @border-radius-base;
    border-radius: @border-radius-base;
@@ -80,17 +80,22 @@
 
 .app-drawer-toggle {
     background-color: transparent;
-	border: none;
+    border: none;
 }
 
 .app-drawer-toggle.navbar-toggle {
-	background-color: #ee3366;
+    background-color: transparent;
+    color: #fff;
     margin-left: 1em;
+}
+
+.app-drawer-icon-open {
+    color: #fff;
 }
 
 // Add background image
 .drawer-nav{
-	background: transparent url('/backend_theme_v10/static/src/img/material-background.jpg') no-repeat scroll center center / cover;
+    background: transparent url('/backend_theme_v10/static/src/img/material-background.jpg') no-repeat scroll center center / cover;
 }
 
 .app-drawer-nav .app-drawer-title {
