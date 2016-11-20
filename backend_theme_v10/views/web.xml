@@ -41,7 +41,7 @@
                         <div class="navbar-header">
 
                             <a href="#"
-                               class="drawer-toggle navbar-collapse collapse btn btn-default app-drawer-toggle"
+                               class="drawer-toggle navbar-collapse collapse app-drawer-toggle"
                                accesskey="A"
                                >
                                 <span class="sr-only">Toggle App Drawer</span>
