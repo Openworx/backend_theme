@@ -4,6 +4,7 @@
 odoo.define('web_responsive', function(require) {
     'use strict';
 
+/*    var $ = require('$'); */
     var Menu = require('web.Menu');
     var Class = require('web.Class');
     var SearchView = require('web.SearchView');
@@ -32,7 +33,7 @@ odoo.define('web_responsive', function(require) {
 
         // Prevent focus of search field on mobile devices
         toggle_visibility: function (is_visible) {
-            $('div.oe_searchview_input').last()
+            $('div.o_searchview_input').last()
                 .one('focus', $.proxy(this.preventMobileFocus, this));
             return this._super(is_visible);
         },
@@ -82,18 +83,10 @@ odoo.define('web_responsive', function(require) {
                 '-': this.LEFT,
             };
             this.initDrawer();
-            var $clickZones = $('.odoo_webclient_container, ' +
+            var $clickZones = $('.o_main, ' +
                                 'a.oe_menu_leaf, ' +
-                                'a.oe_menu_toggler, ' +
-                                'a.oe_logo, ' +
-                                'i.oe_logo_edit'
+                                'a.oe_menu_toggler'
                                 );
-            $('.o_content').scroll(function() {
-                $('.o_control_panel').css(
-                    'margin-top',
-                    -$(this).scrollTop() + 'px'
-                );
-            });
             $clickZones.click($.proxy(this.handleClickZones, this));
             core.bus.on('resize', this, this.handleWindowResize);
             core.bus.on('keydown', this, this.handleNavKeys);
