@@ -174,7 +174,7 @@ body a {
 }
  
 .o_list_view.table thead {
-    background-color: #EEF0F0;
+    background-color: #e2e2e0;
 }
  
 .o_list_view.table thead > tr > th.o_column_sortable:hover {
@@ -184,7 +184,18 @@ body a {
 .o_list_view.table tbody tr.o_group_header {
     background-color: #dfdfdf;
     background-image: none;
-    border-top: 1px solid #EEF0F0;
+    border-top: 1px solid #e2e2e0;
+}
+
+.table-striped > tbody > tr:nth-of-type(2n+1) {
+    background-color: #eef0f0;
+}
+
+.o_list_view tfoot {
+    background-color: @brand-primary;
+    color: #ffffff;
+    cursor: default;
+    font-weight: normal;
 }
 
 // Checkbox ==========================================
