@@ -40,6 +40,10 @@ a.navbar-collapse.collapse {
     border-radius: 0px;
 }
 
+.navbar-nav .open .dropdown-menu {
+	margin-left: 30px;
+}
+
 .panel-heading {
    border-top-left-radius: 0px;
     border-top-right-radius: 0px;
@@ -55,4 +59,27 @@ a.navbar-collapse.collapse {
     font-size: 22px;
     font-weight: 500;
     margin-right: 25px;
+    margin-left: 5px;
+    line-height: @app-name-line-height;
+}
+
+.drawer-toggle.navbar-collapse.collapse.app-drawer-toggle {
+    line-height: @app-name-line-height;
+}
+
+.drawer-toggle.navbar-collapse.collapse.app-drawer-toggle:hover {
+    background-color: #fff;
+
+    .app-drawer-icon-open {
+        color: #22527b;
+    }
+}
+
+// Toggled right menu
+#odooMenuBarToggle {
+    border-color: transparent;
+
+    .fa.fa-bars.fa-lg {
+        color: #fff;
+    }
 }
