@@ -24,6 +24,7 @@
     "data": [
         'views/assets.xml',
         'views/web.xml',
+        'data/config_parameter.xml'
     ],
 }
 
