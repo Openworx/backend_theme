@@ -102,7 +102,9 @@
 
         <xpath expr="//a[@class='o_sub_menu_logo']" position="replace" />
 
-        <xpath expr="//div[@class='o_sub_menu_footer']" position="replace" />
+        <xpath expr="//div[@class='o_sub_menu_footer']" position="replace">
+           <div class="o_sub_menu_footer"></div>
+        </xpath>
 
         <xpath expr="//div[@class='o_sub_menu_content']/t" position="replace">
 
@@ -110,7 +112,7 @@
 			    <ul style="display: none" class="oe_secondary_menu nav navbar-nav" t-att-data-menu-parent="menu['id']">
 				<li class="app-name">
 					<span class="oe_menu_text">
-						<t t-esc="menu['name']"/> 
+						<t t-esc="menu['name']"/>
 					</span>
 				</li>
 				<li>
