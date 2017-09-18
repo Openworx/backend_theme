@@ -19,7 +19,7 @@
     "license": "LGPL-3",
     "installable": True,
     "depends": [
-        'web',
+        'web', 'base_import'
     ],
     "data": [
         'views/assets.xml',

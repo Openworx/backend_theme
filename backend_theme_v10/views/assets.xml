@@ -30,6 +30,9 @@
             <link rel="stylesheet"
                   href="/backend_theme_v10/static/src/less/variables.less"
                   />
+            <link rel="stylesheet"
+                  href="/backend_theme_v10/static/src/less/form_view.less"
+                  />
             <script type="application/javascript"
                     src="/backend_theme_v10/static/lib/js/iscroll-probe.5.2.0.js"
                     />
