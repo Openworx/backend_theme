@@ -8,7 +8,10 @@ odoo.define('web_responsive', function(require) {
     var Menu = require('web.Menu');
     var Class = require('web.Class');
     var SearchView = require('web.SearchView');
+    var ajax = require('web.ajax');
     var core = require('web.core');
+
+    ajax.loadXML('/backend_theme_v10/static/src/xml/web.xml', core.qweb);
 
     Menu.include({
 
