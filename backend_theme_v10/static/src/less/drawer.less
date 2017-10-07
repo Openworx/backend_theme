@@ -5,10 +5,13 @@
 
 @app-drawer-width:          100%; 
 
+.app-drawer-icon-open {
+    color: #ffffff;
+}
 
 // Add background image
 .drawer-nav{
-    background: transparent url('/backend_theme_v10/static/src/img/material-background.jpg') no-repeat scroll center center / cover;
+    background: transparent url('/backend_theme_v11/static/src/img/material-background.jpg') no-repeat scroll center center / cover;
     z-index: 9999 ;
     width: 100% ;
     
@@ -33,6 +36,7 @@
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.45);
 }
 
 .app-drawer-nav {
@@ -59,9 +63,9 @@
 }
 
 .main-nav > .container-fluid .o_sub_menu > .o_sub_menu_content > .oe_secondary_menu > li > a {
-    height: 46px;
+    height: @navbar-height;
     padding: 0px 8px !important;
-    line-height: 46px !important;
+    line-height: @navbar-height !important;
 }
 
 .navbar {
@@ -93,6 +97,18 @@
     max-width: 768px;
     padding-top: 80px !important;
     width: 90%;
+}
+
+.app-drawer-nav .app-drawer-icon-app {
+    border-radius: 3%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.o_mail_navbar_item .o_notification_counter {
+    background: #00a09d !important;
+    color: white !important;
+    margin-top: 1em;
+    margin-right: 0;    
 }
 
 // Default drawer width is 80% in web_responsive, make it 100% width

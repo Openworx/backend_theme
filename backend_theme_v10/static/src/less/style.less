@@ -8,7 +8,7 @@
     top: inherit;
     bottom: 0;
     right: 0;
-    padding: 5px 50px;
+    padding: 5px 5px;
     border-radius: 0 !important;
     opacity: 0.8;
 }
@@ -24,14 +24,6 @@ a:hover {
 	text-decoration: none;
 }
 
-// Adjust menu counter position
-
-//@-moz-document url-prefix() {
-//	.badge {
-//		margin-top: -20px;
-//	}
-//}
-
 // Get rid of purple fontcolor
 
 body a {
@@ -42,89 +34,24 @@ body a {
 	}
 }
 
-.ui-autocomplete .ui-menu-item.ui-state-focus  {
-    background-color: @brand-primary;	
-}
-
-.o_control_panel .breadcrumb > li > a {
-    color: @brand-primary;
-}
-
-.o_form_view .o_horizontal_separator {
-    color: @brand-primary;
-}
-
-.o_stat_value {
-    color: @brand-primary !important;
-}
-
-.o_form_view .oe_button_box .oe_stat_button .o_button_icon {
-    color: @brand-primary;
-}
-
-.nav-tabs > li > a {
-    color: @brand-primary;
-}
-
-.o_web_settings_dashboard .o_web_settings_dashboard_col .o_web_settings_dashboard_planner .o_web_settings_dashboard_progress_title {
-    color: @brand-primary !important
-}
-
-.o_calendar_container .o_calendar_sidebar_container .ui-datepicker table .ui-state-active {
-    background: @brand-primary none repeat scroll 0 0 !important;
-	color: #ffffff !important;
-}
-
-.o_calendar_container .o_calendar_sidebar_container .ui-datepicker table.ui-datepicker-calendar tbody td a {
-    color: @brand-primary;
-}
-
-.o_progressbar {
-    color: @brand-primary;
-}
-
-.o_progressbar .o_progress .o_progressbar_complete {
-    background-color: @brand-primary;
-}
-
-.o_web_client .o_kanban_view.o_kanban_dashboard.o_kanban_ungrouped a, .o_web_client .o_kanban_view.o_kanban_dashboard.o_kanban_grouped a {
-    color: @brand-primary;
-}
-
-
-// Navbar =========================================
-#oe_main_menu_navbar {
-    .box-shadow(0px 0px 8px #666666);
-    border: none;
-    .navbar-collapse {
-        padding-right: 16px;
-        padding-left: 16px;
-    }
-}
-
-#oe_main_menu_navbar,
-.navbar-nav {
-    li {
-        a, button {
-            font-size: 13px !important;
-         //   padding: 14px 10px !important;
-            margin-top: 0 !important;
-            line-height: 21px !important;
-        }
-    }
-    .dropdown-menu {
-        li {
-            a, button {
-                padding: 4px 10px !important;
-                font-size: 13px !important;
-			}
-        }
-    }
-}
-
 // Fix color Add file button
 .o_control_panel .o_cp_sidebar .o_hidden_input_file .o_form_binary_form span {
-    color: #333;
+    color: @gray-dark !important;
+}
+
+//
+
+// Filter search label
+
+.o_searchview {
+    .o_searchview_facet {
+
+         background-color: #ffffff;
+
+        .o_searchview_facet_label {
+            background-color: @brand-primary;
+        }
+    }
 }
 
 // Align green progress indicator
@@ -132,50 +59,107 @@ body a {
     margin-top: 18px !important;
 }
 
-// Add some space in button groups
-//.btn-group > .btn, .btn-group-vertical > .btn {
-//    float: left;
-//    margin: 3px;
-//    position: relative;
+// Buttons
+
+.btn {
+    border: none;
+    font-weight: 500;
+    
+}
+
+//.btn-default {
+//    color: @brand-primary;
+//    background-color: transparant;
 //}
 
-// Bigger font in buttons
-
-.btn-sm, .btn-group-sm > .btn {
-    font-size: 13px;
+.btn-primary, .btn-default {
+    text-transform: uppercase;
 }
 
-// =========================================
-// Make formwidth wider to screen
-
-.o_form_view .o_form_sheet_bg .o_form_sheet {
-	max-width: 1200px;
+.btn-default {
+    color: @brand-primary;
+    background-color: transparent;
 }
 
-// Darker background
-.o_form_view .o_form_sheet_bg {
-    background-color: #8f8f8f;
-    background-image: none;
-    border: 0 none;
+.btn-primary {
+    color: #ffffff;
+    background-color: @brand-primary;
 }
 
-
-.o_web_client > .o_main .o_main_content {
-	background-color: #8f8f8f;
+.btn:active, .btn.active {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background-color: @gray-lighter !important;
 }
 
-.o_kanban_view {
-	background-color: #8f8f8f;
+.btn-group.open .dropdown-toggle {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background-color: @gray-lighter !important;
 }
 
-.o_event_left {
+.o_form_view .oe_button_box .oe_stat_button {
+    border: 1px solid @gray-lighter;
+}
+
+.o_dropdown_toggler_btn, .o_dropdown_toggler_btn:hover, .o_dropdown_toggler_btn:focus, .o_dropdown_toggler_btn:hover, .o_dropdown_toggler_btn:focus, .btn-icon, .o_graph_button {
+    text-transform: none !important;
+    color: @gray-dark !important;
+    background-color: transparent !important;
+    border: none !important;
+}
+
+.oe_highlight {
+    color: #ffffff !important;
     background-color: @brand-primary !important;
 }
 
+.o_external_button {
+    color: @brand-primary !important;
+    background: #ffffff;
+}
 
-// Fix background project gantt
-.oe_gantt {
-    background-color: #fff;
+.o_button_icon {
+    color: @brand-primary !important;
+}
+
+// Forms
+
+.o_form_view {
+
+    .o_form_sheet_bg {
+        background: none !important;
+        background-color: #F9F9F9 !important;
+        padding: 0px;
+        .o_form_sheet {
+            border: 1px solid #d9d7d7;
+            box-shadow: 0 5px 20px -15px black;
+            max-width: 90%;
+        }
+    }
+
+    .o_form_statusbar {
+        //margin: -16px;
+  
+        .o_statusbar_status {
+            > .o_arrow_button {
+                background: #ffffff;
+            }
+        }
+    }
+}
+
+// Controlpanel
+
+.o_control_panel {
+    background-color: #ffffff;
+    .breadcrumb {
+        padding:0 ;
+    }
+}
+
+.breadcrumb {
+    background-color: inherit;
 }
 
 // Listview =======================================
@@ -242,7 +226,7 @@ div.o_checkbox > input + span {
  
 div.o_checkbox > input:checked + span {
     background-repeat: no-repeat;
-    background-image: url(/backend_theme_v10/static/src/img/checked.svg);
+    background-image: url(/backend_theme_v11/static/src/img/checked.svg);
     background-position: center center;
 }
  
@@ -254,28 +238,6 @@ div.o_checkbox > input:disabled + span {
  div.o_checkbox > input:focus + span {
     outline: 1px solid @brand-primary;
 }
-
-// Kanban ===========================================
-
-//Project
-.o_kanban_view.o_kanban_dashboard.o_project_kanban .o_project_kanban_boxes .o_project_kanban_box:nth-child(2n+1) {
-    background-color: @brand-primary !important;
-    }
-
-// Search filter
-
-.o_searchview .o_searchview_facet .o_searchview_facet_label {
-    background-color: @brand-primary;
-    }
-
-
-.o_primary {
-    color: @brand-primary !important;
-    }
-
-.o_kanban_view.o_kanban_dashboard.o_salesteam_kanban .o_sales_dashboard > div > table > tbody > tr > td.o_main {
-    background-color: @brand-primary !important;
-    }
 
 // Input field
 
@@ -293,22 +255,22 @@ textarea, select, .o_form_view.o_form_editable .o_form_field_many2manytags,
 	border-bottom: 2px solid @brand-info;
 }
 
-// Control panel
-
-.breadcrumb {
-    background-color: transparent;
-	padding: 0;
+.o_input {
+    border: 1px solid #ccc;
+    border-top-style: none;
+    border-right-style: none;
+    border-left-style: none;
+    color: @gray;
 }
 
-// Make lookup button background transparent
-.o_form_view .o_form_field.o_form_field_many2one .o_external_button {
-    color: @brand-primary;
-	background-color: transparent;
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
+    background-color: #E5E5E5;
+    color: darken(@navbar-default-bg, 15%);
 }
 
 // Button header
 .o_form_view > header {
-    background-color: #ededed;
+    background-color: @odoo-view-background-color;
     background-image: none;
     border-bottom: 1px solid #cacaca;
 }
@@ -322,82 +284,48 @@ textarea, select, .o_form_view.o_form_editable .o_form_field_many2manytags,
 // Status bar
 
 .o_form_view ul.oe_form_status li, .o_form_view ul.oe_form_status_clickable li {
-  background-image: linear-gradient(to bottom, #ededed, #ededed) !important;
+    background-image: linear-gradient(to bottom, @odoo-view-background-color, @odoo-view-background-color) !important;
 }
 
 .o_form_view ul.oe_form_status li > .arrow, .o_form_view ul.oe_form_status_clickable li > .arrow {
-  margin-left: 5px !important;
+    margin-left: 5px !important;
 }
 
 .o_form_view ul.oe_form_status li > .arrow span, .o_form_view ul.oe_form_status_clickable li > .arrow span {
-  margin-left: -20px !important;
-  box-shadow: 2px 0px 1px rgba(255, 255, 255, 0.2), inset -3px 3px 0px rgba(0, 0, 0, 0.2) !important;
-  background-color: #ededed !important;
-  background: -moz-linear-gradient(135deg, #ededed, #ededed) !important;
-  background: -o-linear-gradient(135deg, #ededed, #ededed) !important;
-  background: -webkit-gradient(linear, left top, right bottom, from(#ededed), to(#ededed)) !important;
-  background: -ms-linear-gradient(top, #ededed, #ededed) !important;
-  -moz-border-radius: 0px !important;
-  -webkit-border-radius: 0px !important;
-  border-radius: 0px !important;
+    margin-left: -20px !important;
+    box-shadow: 2px 0px 1px rgba(255, 255, 255, 0.2), inset -3px 3px 0px rgba(0, 0, 0, 0.2) !important;
+    background-color: @odoo-view-background-color !important;
+    background: -moz-linear-gradient(135deg, @odoo-view-background-color, @odoo-view-background-color) !important;
+    background: -o-linear-gradient(135deg, @odoo-view-background-color, @odoo-view-background-color) !important;
+    background: -webkit-gradient(linear, left top, right bottom, from(@odoo-view-background-color), to(@odoo-view-background-color)) !important;
+    background: -ms-linear-gradient(top, @odoo-view-background-color, @odoo-view-background-color) !important;
+    -moz-border-radius: 0px !important;
+    -webkit-border-radius: 0px !important;
+    border-radius: 0px !important;
 
 }
 
 .o_form_view ul.oe_form_status li.oe_active > .arrow span, .o_form_view ul.oe_form_status_clickable li.oe_active > .arrow span {
-  box-shadow: 2px 0px 1px rgba(255, 255, 255, 0.2), inset -3px 3px 0px @brand-info !important;
-  background-color: #ededed !important;
-  background: -moz-linear-gradient(135deg, #ededed, #ededed) !important;
-  background: -o-linear-gradient(135deg, #ededed, #ededed) !important;
-  background: -webkit-gradient(linear, left top, right bottom, from(#ededed), to(#ededed)) !important;
-  background: -ms-linear-gradient(top, #ededed, #ededed) !important;
+    box-shadow: 2px 0px 1px rgba(255, 255, 255, 0.2), inset -3px 3px 0px @brand-info !important;
+    background-color: @odoo-view-background-color !important;
+    background: -moz-linear-gradient(135deg, @odoo-view-background-color, @odoo-view-background-color) !important;
+    background: -o-linear-gradient(135deg, @odoo-view-background-color, @odoo-view-background-color) !important;
+    background: -webkit-gradient(linear, left top, right bottom, from(@odoo-view-background-color), to(@odoo-view-background-color)) !important;
+    background: -ms-linear-gradient(top, @odoo-view-background-color, @odoo-view-background-color) !important;
 }
 
 
 .o_form_view ul.oe_form_status li.oe_active > .label, .o_form_view ul.oe_form_status_clickable li.oe_active > .label {
-  color: @brand-info !important;
-  font-weight: bold;
-  text-shadow: 0 1px 1px #ededed !important;
+    color: @brand-info !important;
+    font-weight: bold;
+    text-shadow: none !important;
+}
+
+.o_form_view ul.oe_form_status li > .label, .o_form_view ul.oe_form_status_clickable li > .label {
+    text-shadow: none !important;
+    color: @gray-light;
 }
 
 .o_form_view ul.oe_form_status li:first-child > .label, .o_form_view ul.oe_form_status_clickable li:first-child > .label {
-  border-left: 0px solid #cacaca  !important;
-}
-
-// Chat window
-
-.o_chat_window .o_chat_header {
-    background-color: @brand-primary !important;
-}
-
-// Explorer 11 fix to use fullscreen
-
-@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-
-	.oe-view-manager-view-kanban, .oe-view-manager-view-form, .oe-view-manager-view-list, .oe-view-manager-view-calendar, .oe-view-manager-view-pivot, .oe-view-manager-view-graph {
-        width: 100% !important;
-	}
-
-	// Fix user preference height	
-	.modal .modal-content .modal-body .oe-view-manager-content {
-		position: static;
-		height: 400px;
-	}
-	
-	// Fix salesboard width
-	.oe-view-manager-view-sales_team_dashboard {
-		width: 100%;
-	}
-
-}
-
-// Better contrast navnar sub-menu
-
-.dropdown-header {
-  font-weight: bolder;
-  background-color: @dropdown-border;
-}
-
-// Better contrast no-content
-.oe_view_nocontent {
-color: #333;
+    border-left: 0px solid @odoo-view-background-color !important;
 }
