@@ -1,0 +1,140 @@
+/* Copyright 2016, 2017 Openworx
+ * License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl). */
+
+/* App Drawer Toggle */
+
+@app-drawer-width:          100%; 
+
+.app-drawer-icon-open {
+    color: #ffffff;
+}
+
+// Add background image
+.drawer-nav{
+    background: transparent url('/backend_theme_v11/static/src/img/material-background.jpg') no-repeat scroll center center / cover;
+    z-index: 9999 ;
+    width: 100% ;
+    
+    .app-drawer-panel-title {
+        margin-left: -14px;
+    }
+    
+    .panel-body {
+        padding-top: 80px;
+    }
+        
+    #appDrawerAppPanelHead {
+	z-index:9999;
+    }
+}
+
+.app-drawer-nav .app-drawer-title {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 8px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.45);
+}
+
+.app-drawer-nav {
+    border: 0px !important;
+    border-radius: 0px !important;
+}
+
+.panel-heading {
+    border-top-right-radius: 0px;
+    border-top-left-radius: 0px;
+}
+
+.oe_secondary_menu > li.app-name {
+    padding: 7px 12px !important;
+}
+.main-nav > .container-fluid .o_sub_menu > .o_sub_menu_content > .oe_secondary_menu > li.app-name > .oe_menu_text {
+    font-size: 22px !important;
+    color: white;
+    margin-right: 35px;
+}
+
+.main-nav > .container-fluid .o_sub_menu > .o_sub_menu_content > .oe_secondary_menu {
+    margin-left: -8px !important;
+}
+
+.main-nav > .container-fluid .o_sub_menu > .o_sub_menu_content > .oe_secondary_menu > li > a {
+    height: @navbar-height;
+    padding: 0px 8px !important;
+    line-height: @navbar-height !important;
+}
+
+.navbar {
+    border-radius: 0px;
+    margin-bottom: 0px !important;
+    border: 0px !important;
+}
+
+// User menubar
+
+.oe_topbar_avatar {
+    max-height: 16px !important;
+    height: 16px !important;
+    width: 16px !important;
+    margin-top: -4px !important;
+}
+
+.oe_topbar_name {
+    top: 0px !important;
+}
+
+.main-nav .navbar-systray > .oe_user_menu_placeholder > li > a .caret {
+    top: 0px !important;
+}
+
+// Center app icons
+.app-drawer-nav .panel-body {
+    margin: auto;
+    max-width: 768px;
+    padding-top: 80px !important;
+    width: 90%;
+}
+
+.app-drawer-nav .app-drawer-icon-app {
+    border-radius: 3%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.o_mail_navbar_item .o_notification_counter {
+    background: #00a09d !important;
+    color: white !important;
+    margin-top: 1em;
+    margin-right: 0;    
+}
+
+// Default drawer width is 80% in web_responsive, make it 100% width
+
+.drawer--left.drawer-open .drawer-nav, .drawer--left .drawer-hamburger, .drawer--left.drawer-open .drawer-navbar .drawer-hamburger {
+    left: 0 !important;
+}
+
+.drawer-nav {
+    width: 100% !important;
+}
+
+.drawer--left .drawer-nav {
+    left: -100% !important;
+}
+
+.drawer--left.drawer-open .drawer-hamburger {
+    left: 100%;
+}
+
+.drawer--right .drawer-nav {
+    right: -100%;
+} 
+
+// Remove transition
+.drawer--left .drawer-nav {
+    -webkit-transition: left .1ms cubic-bezier(0.190, 1.000, 0.220, 1.000) !important; 
+    transition: left .1ms cubic-bezier(0.190, 1.000, 0.220, 1.000) !important;
+}
