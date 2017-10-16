@@ -8,13 +8,13 @@
 
 <odoo>
     <data>
-	<template id="assets_backend" name="Backend Theme" inherit_id="web.assets_backend">
-    	    <xpath expr=".">
-		<link rel="stylesheet" href="/backend_theme_v11/static/src/less/drawer.less"/>
-		<link rel="stylesheet" href="/backend_theme_v11/static/src/less/variables.less"/>
-		<link rel="stylesheet" href="/backend_theme_v11/static/src/less/bootswatch.less"/>
-		<link rel="stylesheet" href="/backend_theme_v11/static/src/less/style.less"/>
-	    </xpath>
-	</template>
+		<template id="assets_backend" name="Backend Theme" inherit_id="web.assets_backend">
+			<xpath expr=".">
+				<link rel="stylesheet" href="/backend_theme_v11/static/src/less/drawer.less"/>
+				<link rel="stylesheet" href="/backend_theme_v11/static/src/less/variables.less"/>
+				<link rel="stylesheet" href="/backend_theme_v11/static/src/less/bootswatch.less"/>
+				<link rel="stylesheet" href="/backend_theme_v11/static/src/less/style.less"/>
+			</xpath>
+		</template>
     </data>
 </odoo>
