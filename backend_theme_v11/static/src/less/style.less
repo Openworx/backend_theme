@@ -272,3 +272,52 @@ textarea, select, .o_form_view.o_form_editable .o_form_field_many2manytags,
     background-color: #E5E5E5;
     color: darken(@navbar-default-bg, 15%);
 }
+
+// Sidechatter like EE
+
+@o-chatter-width: 510px;
+
+@media screen and (min-width: 1600px) {
+
+    .o_form_sheet_bg {
+        width: ~"calc(100% - 510px)";
+        float: left;
+        height: 100vh;
+        overflow: auto;
+    }
+
+    .o_form_view .o_form_sheet_bg .o_form_sheet {
+        max-width: 97%;
+    }
+    .o_form_view .o_form_sheet_bg {
+        border-bottom: none;
+    }
+    
+    .oe_chatter {
+        width: @o-chatter-width;
+        background-color: #ffffff;
+        float:right;
+        border-left: 1px solid @gray-lighter;
+        overflow: auto;
+        padding: 0 !important;
+    }
+    
+    .o_chatter {
+        height: 100vh;
+    }
+    
+    .o_chatter_topbar {
+        margin: 0 !important;   
+    }
+    
+    .o_thread_date.btn {
+        color: inherit;
+    }
+    
+    // Fix Modal Dialog size = Scheduled Action button
+    .modal .modal-dialog .o_form_view .o_form_sheet_bg, .modal .modal-dialog .o_form_view .o_form_sheet {
+        width: 100%;
+        height: 100%;
+    }
+
+}
