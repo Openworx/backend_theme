@@ -14,6 +14,10 @@
 				<link rel="stylesheet" href="/backend_theme_v11/static/src/less/variables.less"/>
 				<link rel="stylesheet" href="/backend_theme_v11/static/src/less/bootswatch.less"/>
 				<link rel="stylesheet" href="/backend_theme_v11/static/src/less/style.less"/>
+				<link rel="stylesheet" href="/backend_theme_v11/static/src/less/sidebar.less"/>
+				
+				<script type="application/javascript" src="/backend_theme_v11/static/src/js/sidebar.js"/>
+				<script type="application/javascript" src="/backend_theme_v11/static/src/js/sidebar-toggle.js"/>
 			</xpath>
 		</template>
     </data>
