@@ -5,7 +5,7 @@
 {
     "name": "Material/United Backend Theme",
     "summary": "Odoo 11.0 community backend theme",
-    "version": "11.0.1.0.2",
+    "version": "11.0.1.0.3",
     "category": "Themes/Backend",
     "website": "http://www.openworx.nl",
 	"description": """
