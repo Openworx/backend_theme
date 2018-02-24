@@ -13,7 +13,7 @@
                     <ul id="sidebar" class="app-sidebar-menu">
                         <li class="nav-item"  t-as="menu" t-foreach="menu_data['children']" >
                             <t t-set="debug_param" t-value="''"/>
-                            <a t-att-href="'/web%s#menu_id=%s&amp;action=%s' % (debug_param, menu['id'], menu['action'] and menu['action'].split(',')[1] or '')"
+                            <a t-att-href="'/web%s#menu_id=%s&amp;action=' % (debug_param, menu['id'])"
                                t-att-class="'nav-link nav-toggle' if menu.get('children') else 'nav-link '"
                                t-att-data-menu="menu['id']"
                                t-att-data-menu-xmlid="menu.get('xmlid')"
