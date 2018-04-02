@@ -3,17 +3,34 @@
 
 /* App Drawer Toggle */
 
-@app-drawer-width:          100%; 
+@app-drawer-width: 100%; 
 
-.app-drawer-icon-open {
+.app-drawer-toggle, .app-drawer-toggle.btn:active {
+    background-color: transparent !important;
+}
+
+.app-drawer-icon-open, .app-drawer-icon-close {
     color: #ffffff;
+
+    &:hover {
+        color: #fff;
+    }
+}
+
+.app-drawer-icon-open:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.app-drawer-icon-close {
+    display: none;
 }
 
 // Add background image
 .drawer-nav{
     background: transparent url('/dashboard') no-repeat scroll center center / cover;
-    z-index: 9999 ;
-    width: 100% ;
+    z-index: 9;
+    width: 100%;
+    top: inherit;
     
     .app-drawer-panel-title {
         margin-left: -14px;
@@ -24,7 +41,13 @@
     }
         
     #appDrawerAppPanelHead {
-	z-index:9999;
+        z-index: 9999;
+        background-color: transparent;
+        border: none;
+
+        a {
+            color: #FFFFFF;
+        }
     }
 }
 
@@ -108,33 +131,50 @@
     background: #00a09d !important;
     color: white !important;
     margin-top: 1em;
-    margin-right: 0;    
+    margin-right: 0;
 }
 
 // Default drawer width is 80% in web_responsive, make it 100% width
 
-.drawer--left.drawer-open .drawer-nav, .drawer--left .drawer-hamburger, .drawer--left.drawer-open .drawer-navbar .drawer-hamburger {
-    left: 0 !important;
+.drawer-open .drawer-overlay {
+    display: none !important;
 }
 
-.drawer-nav {
-    width: 100% !important;
-}
+.drawer-open {
+     .app-drawer-icon-close {
+        display: inherit;
+    }
 
-.drawer--left .drawer-nav {
-    left: -100% !important;
-}
+    ul.oe_secondary_menu, .app-drawer-icon-open {
+        display: none !important;
+    }
 
-.drawer--left.drawer-open .drawer-hamburger {
-    left: 100%;
-}
+    .navbar.navbar-default.main-nav {
+	-webkit-transition: background 0.1ms linear;
+        transition: background 0.1ms linear;
+        background-color: transparent;
+    }
 
-.drawer--right .drawer-nav {
-    right: -100%;
-} 
+    .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+        background-color: transparent;
+    }
+}
 
 // Remove transition
 .drawer--left .drawer-nav {
     -webkit-transition: left .1ms cubic-bezier(0.190, 1.000, 0.220, 1.000) !important; 
     transition: left .1ms cubic-bezier(0.190, 1.000, 0.220, 1.000) !important;
+}
+
+// Footer
+#appDrawerAppPanelFooter {
+    background-color: transparent;
+    border: none;
+
+    .oe_logo {
+        img {
+            display: block;
+            margin: auto;
+        }
+    }
 }
