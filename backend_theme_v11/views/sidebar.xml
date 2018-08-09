@@ -7,7 +7,7 @@
 
 <odoo>
     <template id="app_sidebar" inherit_id="web.webclient_bootstrap" name="Apps Sidebar">
-        <xpath expr="//div[@class='o_main']//div[@class='o_main_content']" position="before">
+        <xpath expr="//div[hasclass('o_main')]//div[hasclass('o_main_content')]" position="before">
             <div id="app-sidebar" class="app-sidebar-panel">
                 <div class="app-sidebar navbar-collapse collapse">
                     <ul id="sidebar" class="app-sidebar-menu">
