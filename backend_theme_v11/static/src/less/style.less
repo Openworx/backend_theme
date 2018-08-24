@@ -276,14 +276,22 @@ textarea, select, .o_form_view.o_form_editable .o_form_field_many2manytags,
 
 .navbar-default .navbar-nav .open .dropdown-menu > li > a {
   @media (max-width : @screen-xs-max) {
-    color : @brand-primary;
+    color : white;
     text-align: center;
   }
 }
 
 @media (max-width: 767px) {
-    .navbar-default .navbar-nav .open .dropdown-menu > li > a {
-	color: @brand-primary;
-	text-align: left;
+    .navbar-nav .open .dropdown-menu {
+    background-color: #fff;
     }
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+    color: @gray;
+    text-align: left;
+    }
+    .o_mail_channel_preview .o_mail_channel_image > img {
+    height: auto;
+    }
+    
 }
+
