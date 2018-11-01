@@ -6,7 +6,7 @@
     "name": "Openworx Backend Theme",
     "summary": "Openworx Backend Theme 	",
     "version": "12.0.0.1",
-    "category": "Themes/Backend",
+    "category": "Theme/Backend",
     "website": "http://www.openworx.nl",
 	"description": """
 		Backend theme for Odoo 12.0 community edition.
