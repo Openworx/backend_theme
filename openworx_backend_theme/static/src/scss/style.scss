@@ -1,0 +1,325 @@
+/* Copyright 2016, 2018 Openworx.
+ * License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl). */
+
+
+@font-face {
+    font-family: Roboto;
+    src: url(/openworx_backend_theme/static/src/font/Roboto-Regular.ttf)
+}
+
+
+$gray-base:              #000;
+$gray-darker:            lighten($gray-base, 13.5%); // #222
+$gray-dark:              #666;   // #333
+$gray:                   #777; // #555
+$gray-light:             #AEA79F;   // #999
+$gray-lighter: lighten($gray-base, 93.5%); // #eee
+
+
+$brand-primary: #875a7b;
+$brand-secondary: #00A09D;
+
+body {
+
+    font-family: "Roboto";
+}
+
+.o_loading {
+    background-color: $brand-primary;
+}
+
+.o_main_navbar {
+    background-color : $brand-primary;
+}
+
+.o_main_navbar > a:hover, .o_main_navbar > a:focus, .o_main_navbar > button:hover, .o_main_navbar > button:focus {
+
+    background-color: #68465f;
+    color: inherit;
+
+}
+
+.o_main_navbar > ul > li > a:hover, .o_main_navbar > ul > li > label:hover {
+    background-color: #68465f;
+}
+
+.o_main_navbar .show .dropdown-toggle {
+
+    background-color: #68465f;
+
+}
+
+// Fix color Add file button
+.o_control_panel .o_cp_sidebar .o_hidden_input_file .o_form_binary_form span {
+    color: $gray-dark !important;
+}
+
+// Buttons
+
+.btn {
+    border-radius: 0px;
+}
+
+.btn-primary {
+
+    color: #fff;
+    background-color: $brand-secondary;
+    border-color: $brand-secondary;
+
+}
+
+.btn-primary:hover {
+
+    color: #fff;
+    background-color: #007a77;
+    border-color: #006d6b;
+}
+
+.btn-secondary {
+    border: none;
+}
+
+.btn:active, .btn.active {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background-color: #eee !important;
+}
+
+.btn-group.open .dropdown-toggle {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background-color: #eee !important;
+}
+
+
+.btn-link {
+    color: $brand-secondary;
+}
+
+
+.o_dropdown_toggler_btn, .o_dropdown_toggler_btn:hover, .o_dropdown_toggler_btn:focus, .o_dropdown_toggler_btn:hover, .o_dropdown_toggler_btn:focus, .btn-icon, .o_graph_button {
+    text-transform: none !important;
+    color: $gray-dark !important;
+    background-color: transparent !important;
+    border: none !important;
+}
+
+.dropdown-menu {
+    border-radius: 0px;
+}
+
+oe_highlight {
+    color: #ffffff !important;
+    background-color: $brand-primary !important;
+}
+
+.o_external_button {
+    color: $brand-primary !important;
+    background: #ffffff;
+}
+
+.o_button_icon {
+    color: $brand-primary !important;
+}
+
+
+// Filter search label
+
+.o_searchview {
+    .o_searchview_facet {
+
+         background-color: #ffffff;
+
+        .o_searchview_facet_label {
+            background-color: $brand-primary;
+        }
+    }
+}
+
+a {
+
+    color: #008784;
+    text-decoration: none;
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+
+}
+
+a:hover {
+
+    color: #003a39;
+    text-decoration: none;
+
+}
+
+
+.o_control_panel {
+    background-color: #ffffff;
+}
+
+.breadcrumb {
+    background-color: inherit;
+}
+
+// Input
+
+input[type="text"], input[type="password"], input[type="number"],
+textarea, select, .o_form_view.o_form_editable .o_form_field_many2manytags,
+.o_searchview
+{
+    border: 0;
+    border-radius: 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.o_web_client input:focus, .o_web_client textarea:focus, .o_web_client select:focus {
+    outline: none;
+    border-bottom: 2px solid $brand-primary;
+}
+
+.o_input {
+    border: 1px solid #ccc;
+    border-top-style: none;
+    border-right-style: none;
+    border-left-style: none;
+    color: $gray;
+}
+
+
+
+// Listview
+
+.o_list_view.table {
+    border: none;
+}
+.o_list_view.table thead, .o_list_view.table tfoot, .o_list_view.table td,.o_list_view.table th {
+    border: none;
+}
+ 
+.o_list_view.table thead {
+    background-color: #e2e2e0;
+}
+ 
+.o_list_view.table thead > tr > th.o_column_sortable:hover {
+    background-color: #D6D6D3;
+}
+ 
+.o_list_view.table tbody tr.o_group_header {
+    background-color: #dfdfdf;
+    background-image: none;
+    border-top: 1px solid #e2e2e0;
+}
+
+.table-striped > tbody > tr:nth-of-type(2n+1) {
+    background-color: #eef0f0;
+}
+
+.o_list_view tfoot {
+    background-color: $brand-primary;
+    color: #ffffff;
+    cursor: default;
+    font-weight: normal;
+}
+
+
+// Form
+
+
+// Forms
+
+.o_form_view {
+
+    .o_form_sheet_bg {
+        background: none !important;
+        background-color: #F9F9F9 !important;
+        padding: 0px;
+        .o_form_sheet {
+            border: 1px solid #d9d7d7;
+            box-shadow: 0 5px 20px -15px black;
+            max-width: 90%;
+        }
+    }
+
+    .o_form_statusbar {
+        //margin: -16px;
+  
+        .o_statusbar_status {
+            > .o_arrow_button {
+                background: #ffffff;
+            }
+        }
+    }
+}
+
+/* 
+.o_form_view .o_horizontal_separator {
+    color: inherit;
+}
+
+.o_form_view .o_form_sheet_bg {
+        background: none !important;
+        background-color: #F9F9F9 !important;
+        padding: 0px; 
+}        
+
+
+
+.o_form_view .o_form_sheet_bg > .o_form_sheet {
+            border: 1px solid #d9d7d7;
+            box-shadow: 0 5px 20px -15px black;
+            max-width: 90%;
+}
+
+*/
+
+/*.o_form_view .oe_chatter {
+    max-width: 100%;
+} */
+
+
+ // Sidechatter like EE
+$o-chatter-width: 510px;
+@media screen and (min-width: 1600px) {
+    .o_form_sheet_bg {
+        width: calc(100% - 510px);
+        float: left;
+        height: 100vh;
+        overflow: auto;
+    }
+    .o_form_view .o_form_sheet_bg .o_form_sheet {
+        max-width: 97%;
+    }
+    .o_form_view .o_form_sheet_bg {
+        border-bottom: none;
+    }
+    
+    .oe_chatter {
+        width: $o-chatter-width;
+		max-width: $o-chatter-width !important;
+        min-width: $o-chatter-width !important;
+        background-color: #ffffff;
+        float:right;
+        border-left: 1px solid $gray-lighter;
+        overflow: auto;
+        padding: 0 !important;
+        height: 100vh !important;
+    }
+    
+    .o_chatter {
+        height: 100vh;
+    }
+    
+    .o_chatter_topbar {
+        margin: 0 !important;   
+    }
+    
+    .o_thread_date.btn {
+        color: inherit;
+    }
+    
+    // Fix Modal Dialog size = Scheduled Action button
+    .modal .modal-dialog .o_form_view .o_form_sheet_bg, .modal .modal-dialog .o_form_view .o_form_sheet {
+        width: 100%;
+        height: 100%;
+    }
+}

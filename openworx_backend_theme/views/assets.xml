@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+    Copyright 2016, 2018 Openworx.
+    @author Mario Gielissen <mario@openworx.nl>
+    License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl.html).
+-->
+
+<odoo>
+    <data>
+		<template id="assets_backend" name="Openworx Backend Theme" inherit_id="web.assets_backend">
+		<xpath expr=".">
+                <link rel="stylesheet" href="/openworx_backend_theme/static/src/scss/style.scss"/>
+				<link rel="stylesheet" href="/openworx_backend_theme/static/src/scss/sidebar.scss"/>
+				<script type="application/javascript" src="/openworx_backend_theme/static/src/js/sidebar.js"/>
+			</xpath>
+		</template>
+    </data>
+</odoo>
