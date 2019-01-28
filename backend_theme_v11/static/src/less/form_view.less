@@ -1,0 +1,12 @@
+// Sticky Header & Footer in List View
+.o_view_manager_content {
+    >div {
+        >.table-responsive {
+            >.o_list_view {
+                tfoot tr:nth-child(1) td {
+                    background-color: @odoo-brand-primary;
+                }
+            }
+        }
+    }
+}
