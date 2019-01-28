@@ -12,6 +12,7 @@
 			<xpath expr=".">
 				<link rel="stylesheet" href="/backend_theme_v11/static/src/less/drawer.less"/>
 				<link rel="stylesheet" href="/backend_theme_v11/static/src/less/variables.less"/>
+				<link rel="stylesheet" href="/backend_theme_v11/static/src/less/form_view.less" />
 				<link rel="stylesheet" href="/backend_theme_v11/static/src/less/bootswatch.less"/>
 				<link rel="stylesheet" href="/backend_theme_v11/static/src/less/style.less"/>
 				<link rel="stylesheet" href="/backend_theme_v11/static/src/less/sidebar.less"/>
