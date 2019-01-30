@@ -1,0 +1,1 @@
+This module has been replaced by https://github.com/Openworx/backend_theme/tree/12.0/backend_theme_v12
