@@ -20,9 +20,6 @@
                                t-att-data-action-model="menu['action'] and menu['action'].split(',')[0] or None"
                                t-att-data-action-id="menu['action'] and menu['action'].split(',')[1] or None">
                                 <img t-attf-src="/web/image/ir.ui.menu/{{ menu['id'] }}/web_icon_data" t-att-alt="menu['name']" class="app-sidebar-menuitem" t-att-title="menu['name']"/>
-                                <span class="title" >
-                                    <t t-esc="menu['name']"/>
-                                </span>
                             </a>
                         </li>
                     </ul>
