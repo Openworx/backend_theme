@@ -6,7 +6,7 @@
     "name": "Openworx Material Backend Theme V13",
     "summary": "Openworx Material Backend Theme V13",
     "version": "13.0.0.1",
-    "category": "Theme/Backend",
+    "category": "Backend",
     "website": "http://www.openworx.nl",
 	"description": """
 		Openworx Material Backend theme for Odoo 13.0 community edition.
