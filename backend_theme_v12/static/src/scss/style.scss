@@ -305,12 +305,11 @@ textarea, select, .o_form_view.o_form_editable .o_form_field_many2manytags,
     background-color: #eef0f0;
 }
 
-.o_list_view tfoot {
-    background-color: $brand-primary;
-    color: #ffffff;
-    cursor: default;
-    font-weight: normal;
+.o_list_view tfoot tr:nth-child(1) td {
+    background-color: $brand-primary !important;
+    color: #fff !important;
 }
+
 
 .ui-autocomplete .ui-menu-item.ui-state-focus {
     background-color: #dee2e6;
