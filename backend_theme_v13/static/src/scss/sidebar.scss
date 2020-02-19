@@ -6,9 +6,9 @@
 $odoo-sidebar-width: 180px;
 
 .app-sidebar-panel {
-	flex: 0 0 $odoo-sidebar-width;	
+	flex: 1 1 $odoo-sidebar-width;
     background-color: $gray-base;
-    height: 100% !important;
+    height: calc(100% - 46px) !important;
     overflow-y: auto;
     @media (max-width: 768px) {
       display: none;
@@ -65,5 +65,5 @@ $odoo-sidebar-width: 180px;
 }
 
 .toggle-sidebar {
-    margin-left: 0px - $odoo-sidebar-width;
+    display: none;
 }

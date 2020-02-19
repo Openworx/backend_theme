@@ -60,9 +60,9 @@ body {
 
 }
 
-.app-sidebar {
-    display: none;
-}
+// .app-sidebar {
+//     display: none;
+// }
 
 // Fix color Add file button
 .o_control_panel .o_cp_sidebar .o_hidden_input_file .o_form_binary_form span {
@@ -259,6 +259,18 @@ textarea, select, .o_form_view.o_form_editable .o_form_field_many2manytags,
 .o_web_client input:focus, .o_web_client textarea:focus, .o_web_client select:focus {
     outline: none;
     border-bottom: 2px solid $brand-primary;
+}
+
+html .o_web_client {
+    flex-flow: row wrap;
+    header {
+        flex: 0 0 100%;
+    }
+
+    .o_action_manager {
+        flex: 1 1 calc(100% - 180px);
+        height: calc(100% - 46px) !important;
+    }
 }
 
 .o_input {
