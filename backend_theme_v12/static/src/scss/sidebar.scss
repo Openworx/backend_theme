@@ -52,7 +52,7 @@ $odoo-sidebar-width: 180px;
         }
     }
         > li:hover > a{
-	    background: darken(#0099ff, 15%);
+	    background: $brand-primary;
 	    color: #fff;
         }
     }
