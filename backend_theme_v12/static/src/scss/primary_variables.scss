@@ -1,0 +1,25 @@
+/* Copyright 2016, 2019 Openworx.
+ * License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl). */
+
+
+ @font-face {
+    font-family: Roboto;
+    src: url(/backend_theme_v12/static/src/font/Roboto-Regular.ttf)
+}
+
+
+$gray-base:              #000;
+$gray-dark:              #666;
+$gray:                   #777;
+$gray-light:             #AEA79F;
+
+
+// Change colors here
+
+// Odoo EE colors
+//$brand-primary: #875a7b;
+//$brand-secondary: #00A09D;
+//------------------------
+$brand-primary: #008DCA;
+$brand-secondary: #5EC269;
+//------------------------

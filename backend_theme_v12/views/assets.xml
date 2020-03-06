@@ -10,6 +10,8 @@
     <data>
 		<template id="assets_backend" name="Openworx Backend Theme" inherit_id="web.assets_backend">
 		<xpath expr=".">
+                <link rel="stylesheet" href="/backend_theme_v12/static/src/scss/primary_variables.scss"/>
+                <link rel="stylesheet" href="/backend_theme_v12/static/src/scss/secondary_variables.scss"/>
                 <link rel="stylesheet" href="/backend_theme_v12/static/src/scss/style.scss"/>
 				<link rel="stylesheet" href="/backend_theme_v12/static/src/scss/sidebar.scss"/>
 				<script type="application/javascript" src="/backend_theme_v12/static/src/js/sidebar.js"/>

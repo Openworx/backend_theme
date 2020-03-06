@@ -2,34 +2,6 @@
  * License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl). */
 
 
-@font-face {
-    font-family: Roboto;
-    src: url(/backend_theme_v12/static/src/font/Roboto-Regular.ttf)
-}
-
-
-$gray-base:              #000;
-$gray-darker:            lighten($gray-base, 13.5%);
-$gray-dark:              #666;
-$gray:                   #777;
-$gray-light:             #AEA79F;
-$gray-lighter: lighten($gray-base, 93.5%);
-
-
-// Change colors here
-
-// Odoo EE colors
-//$brand-primary: #875a7b;
-//$brand-secondary: #00A09D;
-//------------------------
-$brand-primary: #008DCA;
-$brand-secondary: #5EC269;
-//------------------------
-
-
-$brand-primary-dark: darken($brand-primary, 10%);
-$brand-secondary-dark: darken($brand-secondary, 10%);
-
 body {
 
     font-family: "Roboto";
