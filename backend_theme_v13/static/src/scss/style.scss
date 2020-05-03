@@ -263,13 +263,18 @@ textarea, select, .o_form_view.o_form_editable .o_form_field_many2manytags,
 
 html .o_web_client {
     flex-flow: row wrap;
-    header {
+
+    >header {
         flex: 0 0 100%;
     }
 
-    .o_action_manager {
+    >.o_action_manager {
         flex: 0 0 calc(100% - 180px);
         height: calc(100% - 46px) !important;
+    }
+
+    .toggle-sidebar~.o_action_manager {
+        flex: 0 0 100%;
     }
 }
 
