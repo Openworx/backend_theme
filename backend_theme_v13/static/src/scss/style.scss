@@ -369,10 +369,20 @@ textarea, select, .o_form_view.o_form_editable .o_form_field_many2manytags,
 // App Dashboard
 
 .o_menu_apps .dropdown-menu.show {
-	background: transparent url('/dashboard') no-repeat scroll center center / cover;
-
+    background: url(/dashboard);
+    background-origin: border-box;
+    background-size: cover;
+    height: calc(100vh);
+    max-height: calc(100vh);
+    border-top: $o-navbar-height solid transparent;
+    top: 0 !important;
 }
 
+.o_main_navbar > ul.o_menu_systray {
+    float: right;
+    position: relative;
+    z-index: 200;
+}
 
 .fa-th-large::before {
     content: "\f00a";
@@ -382,6 +392,8 @@ textarea, select, .o_form_view.o_form_editable .o_form_field_many2manytags,
     width: 46px;
     font-size: 18px;
     text-align: center;
+    position: relative;
+    z-index: 200;
 }
 
 .o-app-name {
