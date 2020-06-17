@@ -60,8 +60,26 @@ body {
 
 }
 
-.app-sidebar {
-    display: none;
+//.app-sidebar {
+//    display: none;
+//}
+
+// Sidebar
+html .o_web_client {
+    flex-flow: row wrap;
+
+    >header {
+        flex: 0 0 100%;
+    }
+
+    >.o_action_manager {
+        flex: 0 0 calc(100% - 180px);
+        height: calc(100% - 46px) !important;
+    }
+
+    .toggle-sidebar~.o_action_manager {
+        flex: 0 0 100%;
+    }
 }
 
 // Fix color Add file button
