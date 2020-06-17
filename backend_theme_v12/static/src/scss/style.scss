@@ -474,16 +474,11 @@ $o-statbutton-spacing: 6px;
 
     // Button box
     .oe_button_box {
-        //position: relative;
-        //display: block;
         margin-bottom: $o-sheet-vpadding;
         text-align: right;
         @include o-form-sheet-negative-margin();
         max-width: calc(100% + #{$o-horizontal-padding*2}) !important;
-        width: calc(100% + #{$o-horizontal-padding*2}); // Use box-shadow instead of border-bottom because some button boxes are
-        // empty in some cases and we do not want to see a floating border in
-        // that cases.
-        // box-shadow: inset 0 -1px 0 gray('400');
+        width: calc(100% + #{$o-horizontal-padding*2}); 
         border-bottom: 1px solid gray('400');
 
         &.o_full .oe_stat_button:not(.o_invisible_modifier)~.oe_stat_button {
@@ -502,7 +497,6 @@ $o-statbutton-spacing: 6px;
             -webkit-flex: 0 0 auto;
             flex: 0 0 auto !important;
             width: percentage(1/3) !important;
-            ; // Adapt the number of visible buttons for each screen width
 
             @include media-breakpoint-up(sm) {
                 width: percentage(1/5) !important;
@@ -520,7 +514,7 @@ $o-statbutton-spacing: 6px;
         >.btn.oe_stat_button {
             border: none;
             height: $o-statbutton-height;
-            padding: 0 $o-statbutton-spacing 0 0; // padding-left will be achieved through margin-left of content
+            padding: 0 $o-statbutton-spacing 0 0;
             text-align: left;
             background-color: transparent;
             opacity: 0.8;
@@ -533,7 +527,7 @@ $o-statbutton-spacing: 6px;
             }
 
             >.o_field_percent_pie {
-                margin-left: $o-statbutton-spacing; // To create the button padding left (firefox bug)
+                margin-left: $o-statbutton-spacing;
             }
 
             &.o_button_more {
