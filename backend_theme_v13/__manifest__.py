@@ -5,7 +5,7 @@
 {
     "name": "Openworx Material Backend Theme V13",
     "summary": "Openworx Material Backend Theme V13",
-    "version": "13.0.0.1",
+    "version": "13.0.0.2",
     "category": "Theme/Backend",
     "website": "http://www.openworx.nl",
 	"description": """
