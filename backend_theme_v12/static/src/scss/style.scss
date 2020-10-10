@@ -286,15 +286,15 @@ textarea, select, .o_form_view.o_form_editable .o_form_field_many2manytags,
 .o_list_view.table thead, .o_list_view.table tfoot, .o_list_view.table td,.o_list_view.table th {
     border: none;
 }
- 
+
 .o_list_view.table thead {
     background-color: #e2e2e0;
 }
- 
+
 .o_list_view.table thead > tr > th.o_column_sortable:hover {
     background-color: #D6D6D3;
 }
- 
+
 .o_list_view.table tbody tr.o_group_header {
     background-color: #dfdfdf;
     background-image: none;
@@ -343,11 +343,11 @@ textarea, select, .o_form_view.o_form_editable .o_form_field_many2manytags,
             border: 1px solid #d9d7d7;
             box-shadow: 0 5px 20px -15px black;
         }
-    } 
+    }
 
     .o_form_statusbar {
         //margin: -16px;
-  
+
         .o_statusbar_status {
             > .o_arrow_button {
                 background: #ffffff;
@@ -471,4 +471,22 @@ $o-statbutton-spacing: 6px;
             padding-left: 0px;
         }
     }
+
+}
+
+// Override `@include media-breakpoint-up` in module `web_responsive`
+@include media-breakpoint-up(md) {
+    .o_form_view .oe_button_box + .oe_avatar + .oe_title {
+      /* Add 110px in the calculation for the avatar space */
+      width: calc(100% - 400px - 110px);
+      min-width: 400px;
+      max-width: 650px;
+    }
+    /* Same correction for res.users .oe_title div */
+    .o_form_view .o_field_integer + .oe_button_box + .o_form_header + .o_field_boolean +
+    .o_form_header + .oe_avatar + .oe_title {
+      width: calc(100% - 400px - 110px);
+      min-width: 400px;
+      max-width: 650px;
+    }    
 }
