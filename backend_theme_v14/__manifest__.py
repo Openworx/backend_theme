@@ -19,7 +19,7 @@
     "installable": True,
     "depends": [
         'web',
-        'ow_web_responsive',
+        'web_responsive',
 
     ],
     "data": [
@@ -31,4 +31,3 @@
     #'live_test_url': 'https://youtu.be/JX-ntw2ORl8'
 
 }
-
