@@ -10,8 +10,7 @@
     <template id="app_sidebar" inherit_id="web.webclient_bootstrap" name="Apps Sidebar">
         <xpath expr="//t[@t-set='body_classname']" position="after">
             <div id="app-sidebar" class="app-sidebar-panel">
-<!--                <div class="app-sidebar navbar-collapse collapse"> -->
-		    <div class="app-sidebar">
+                <div class="app-sidebar navbar-collapse collapse">
                     <ul id="sidebar" class="app-sidebar-menu">
                         <li class="nav-item"  t-as="menu" t-foreach="menu_data['children']" >
                             <t t-set="debug_param" t-value="''"/>
