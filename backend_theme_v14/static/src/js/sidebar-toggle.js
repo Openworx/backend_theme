@@ -1,7 +1,7 @@
 /* Copyright 2017 Openworx.
  * License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl). */
 
-odoo.define("backend_theme_v11.sidebar-toggle", function (require) {
+odoo.define("backend_theme_v14.sidebar-toggle", function (require) {
   "use strict";
 
   var base = require("web_editor.base");
