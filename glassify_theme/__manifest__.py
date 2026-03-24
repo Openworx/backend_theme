@@ -1,5 +1,5 @@
 {
-    "name": "Glassify Theme",
+    "name": "Glassify Backend Community",
     "summary": "Glassify Backend Theme [Alpha version]",
     "version": "18.0.1.0.0",
     "category": "Themes/Backend",
