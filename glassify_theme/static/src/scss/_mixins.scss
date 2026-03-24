@@ -1,0 +1,113 @@
+// ============================================================
+// Glassify - Glassmorphism Mixin Toolkit
+// ============================================================
+
+// -- Configuration --
+$glass-blur-sm: 8px;
+$glass-blur-md: 16px;
+$glass-blur-lg: 24px;
+$glass-blur-xl: 40px;
+
+$glass-bg-opacity-light: 0.55;
+$glass-bg-opacity-medium: 0.65;
+$glass-bg-opacity-heavy: 0.80;
+
+$glass-border-opacity: 0.18;
+$glass-highlight-opacity: 0.35;
+
+$glass-shadow-color: rgba(0, 0, 0, 0.08);
+$glass-glow-color: rgba(140, 160, 255, 0.15);
+$glass-accent: rgba(99, 102, 241, 0.12);
+
+// -- Primary Glass Panel --
+@mixin glass-panel(
+    $blur: $glass-blur-md,
+    $bg-opacity: $glass-bg-opacity-medium,
+    $bg-color: white
+) {
+    background: rgba($bg-color, $bg-opacity);
+    backdrop-filter: blur($blur) saturate(1.4);
+    -webkit-backdrop-filter: blur($blur) saturate(1.4);
+    border: 1px solid rgba(white, $glass-border-opacity);
+    box-shadow:
+        0 4px 24px $glass-shadow-color,
+        inset 0 1px 0 rgba(white, $glass-highlight-opacity);
+}
+
+// -- Elevated Glass Card --
+@mixin glass-card(
+    $blur: $glass-blur-md,
+    $bg-opacity: $glass-bg-opacity-light,
+    $radius: 12px
+) {
+    @include glass-panel($blur, $bg-opacity);
+    border-radius: $radius;
+    box-shadow:
+        0 8px 32px rgba(0, 0, 0, 0.06),
+        0 2px 8px rgba(0, 0, 0, 0.04),
+        inset 0 1px 0 rgba(white, 0.4);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+
+    &:hover {
+        box-shadow:
+            0 12px 40px rgba(0, 0, 0, 0.08),
+            0 4px 12px rgba(0, 0, 0, 0.06),
+            inset 0 1px 0 rgba(white, 0.5);
+        transform: translateY(-1px);
+    }
+}
+
+// -- Glass Toolbar/Bar --
+@mixin glass-bar(
+    $blur: $glass-blur-lg,
+    $bg-opacity: $glass-bg-opacity-heavy,
+    $bg-color: white
+) {
+    @include glass-panel($blur, $bg-opacity, $bg-color);
+    border: none;
+    border-bottom: 1px solid rgba(white, 0.2);
+}
+
+// -- Glass Modal Overlay --
+@mixin glass-overlay(
+    $blur: $glass-blur-xl,
+    $bg-opacity: $glass-bg-opacity-medium,
+    $bg-color: white
+) {
+    @include glass-panel($blur, $bg-opacity, $bg-color);
+    border-radius: 16px;
+    box-shadow:
+        0 24px 80px rgba(0, 0, 0, 0.12),
+        0 8px 24px rgba(0, 0, 0, 0.06),
+        inset 0 1px 0 rgba(white, 0.5);
+}
+
+// -- Light Refraction Gradient Overlay --
+@mixin glass-refraction($angle: 135deg) {
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(
+            $angle,
+            rgba(255, 255, 255, 0.15) 0%,
+            rgba(255, 255, 255, 0.05) 40%,
+            transparent 60%,
+            rgba(140, 160, 255, 0.05) 100%
+        );
+        pointer-events: none;
+        border-radius: inherit;
+        z-index: 1;
+    }
+}
+
+// -- Glow Border --
+@mixin glass-glow-border($color: $glass-glow-color, $spread: 1px) {
+    box-shadow:
+        0 0 0 $spread $color,
+        0 4px 24px $glass-shadow-color,
+        inset 0 1px 0 rgba(white, $glass-highlight-opacity);
+}

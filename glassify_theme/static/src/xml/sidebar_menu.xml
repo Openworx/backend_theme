@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- Copyright 2024 Glassify Theme
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl). -->
+<templates xml:space="preserve">
+
+    <!-- ============================================================
+         Override WebClient: wrap ActionContainer with sidebar
+         ============================================================ -->
+    <t t-inherit="web.WebClient" t-inherit-mode="extension">
+        <xpath expr="//ActionContainer" position="replace">
+            <div class="lg_main_container d-flex flex-grow-1 overflow-hidden">
+                <SidebarMenu />
+                <ActionContainer />
+            </div>
+        </xpath>
+
+    </t>
+
+    <!-- Add company logo to navbar (desktop only) -->
+    <t t-inherit="web.NavBar" t-inherit-mode="extension">
+        <xpath expr="//t[@t-call='web.NavBar.AppsMenu']" position="before">
+            <a class="lg_navbar_logo d-none d-md-flex" href="/odoo">
+                <img src="/glassify_theme/logo" alt="Company logo" />
+            </a>
+        </xpath>
+    </t>
+
+    <!-- ============================================================
+         SidebarMenu Component Template
+         ============================================================ -->
+    <t t-name="glassify_theme.SidebarMenu">
+        <aside class="lg_sidebar d-none d-md-flex"
+               t-att-class="{'lg_sidebar--collapsed': state.collapsed}">
+
+            <!-- App Icon Rail -->
+            <div class="lg_sidebar__rail">
+                <!-- Expand button at top of rail (only when collapsed) -->
+                <button t-if="state.collapsed and currentApp and currentAppSections.length"
+                        class="lg_sidebar__toggle-btn mb-1"
+                        t-on-click="toggleCollapsed"
+                        title="Expand menu">
+                    <i class="fa fa-angle-double-right" />
+                </button>
+
+                <t t-foreach="apps" t-as="app" t-key="app.id">
+                    <a class="lg_sidebar__app-icon"
+                       t-att-class="{'active': currentApp and currentApp.id === app.id}"
+                       t-att-href="getMenuItemHref(app)"
+                       t-on-click.prevent="() => this.onAppClick(app)"
+                       t-att-title="app.name">
+                        <img t-att-src="getAppIconSrc(app)"
+                             t-att-alt="app.name"
+                             class="lg_sidebar__app-img"
+                             draggable="false" />
+                    </a>
+                </t>
+            </div>
+
+            <!-- Submenu Panel -->
+            <div class="lg_sidebar__submenu"
+                 t-if="currentApp and currentAppSections.length and !state.collapsed">
+                <div class="lg_sidebar__submenu-header">
+                    <span class="lg_sidebar__submenu-title" t-esc="currentApp.name" />
+                    <button class="lg_sidebar__toggle-btn ms-auto"
+                            t-on-click="toggleCollapsed"
+                            title="Collapse menu">
+                        <i class="fa fa-angle-double-left" />
+                    </button>
+                </div>
+                <nav class="lg_sidebar__submenu-nav">
+                    <t t-foreach="currentAppSections" t-as="section" t-key="section.id">
+                        <t t-call="glassify_theme.SidebarMenuItem">
+                            <t t-set="menu" t-value="section" />
+                            <t t-set="depth" t-value="0" />
+                        </t>
+                    </t>
+                </nav>
+            </div>
+        </aside>
+    </t>
+
+    <!-- ============================================================
+         Recursive Submenu Item Template
+         ============================================================ -->
+    <t t-name="glassify_theme.SidebarMenuItem">
+        <!-- Leaf item (clickable action) -->
+        <t t-if="!menu.childrenTree.length">
+            <a class="lg_sidebar__menu-link"
+               t-att-href="getMenuItemHref(menu)"
+               t-on-click.prevent="() => this.onMenuClick(menu)"
+               t-att-style="'padding-left: ' + (12 + depth * 14) + 'px'"
+               t-esc="menu.name" />
+        </t>
+        <!-- Group header with children -->
+        <t t-else="">
+            <div class="lg_sidebar__menu-group"
+                 t-att-style="'padding-left: ' + (12 + depth * 14) + 'px'">
+                <span class="lg_sidebar__menu-group-title" t-esc="menu.name" />
+            </div>
+            <t t-foreach="menu.childrenTree" t-as="child" t-key="child.id">
+                <t t-call="glassify_theme.SidebarMenuItem">
+                    <t t-set="menu" t-value="child" />
+                    <t t-set="depth" t-value="depth + 1" />
+                </t>
+            </t>
+        </t>
+    </t>
+
+</templates>

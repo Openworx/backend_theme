@@ -1,0 +1,47 @@
+// ============================================================
+// Glassify - Control Panel
+// ============================================================
+
+.o_control_panel {
+    @include glass-panel($glass-blur-md, 0.60);
+    border: none;
+    border-bottom: 1px solid rgba(99, 102, 241, 0.08);
+
+    .breadcrumb-item {
+        a {
+            color: $o-brand-primary;
+            text-decoration: none;
+
+            &:hover {
+                color: darken($o-brand-primary, 10%);
+            }
+        }
+        &.active {
+            color: $o-main-headings-color;
+            font-weight: 600;
+        }
+    }
+
+    .o_searchview {
+        background: rgba(255, 255, 255, 0.5) !important;
+        border: 1px solid rgba(99, 102, 241, 0.12) !important;
+        border-radius: 10px !important;
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+
+        &:focus-within {
+            border-color: rgba(99, 102, 241, 0.3) !important;
+            box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.08);
+        }
+    }
+
+    .o_cp_switch_buttons {
+        .btn {
+            border-radius: 8px;
+            &.active {
+                background: rgba(99, 102, 241, 0.12);
+                color: $o-brand-primary;
+            }
+        }
+    }
+}

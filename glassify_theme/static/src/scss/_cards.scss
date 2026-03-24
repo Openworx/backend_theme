@@ -1,0 +1,47 @@
+// ============================================================
+// Glassify - Cards & Stat Buttons
+// ============================================================
+
+.card {
+    @include glass-card($glass-blur-md, 0.60, 10px);
+    border: 1px solid rgba(255, 255, 255, 0.25) !important;
+}
+
+// Stat buttons in form views
+.oe_stat_button {
+    border-radius: 10px !important;
+    border: 1px solid rgba(99, 102, 241, 0.1) !important;
+    background: rgba(255, 255, 255, 0.4) !important;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    transition: all 0.2s ease;
+
+    &:hover {
+        background: rgba(255, 255, 255, 0.6) !important;
+        border-color: rgba(99, 102, 241, 0.2) !important;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+    }
+}
+
+// Settings page
+.o_base_settings {
+    .o_settings_container {
+        .o_setting_box {
+            @include glass-card($glass-blur-sm, 0.5, 10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            margin-bottom: 8px;
+
+            &:hover {
+                transform: none;
+            }
+        }
+    }
+}
+
+// Dashboard widgets
+.o_dashboard {
+    .o_aggregate {
+        @include glass-card($glass-blur-sm, 0.55, 10px);
+        border: 1px solid rgba(255, 255, 255, 0.25);
+    }
+}

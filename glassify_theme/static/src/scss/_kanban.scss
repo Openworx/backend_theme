@@ -1,0 +1,41 @@
+// ============================================================
+// Glassify - Kanban View
+// ============================================================
+
+.o_kanban_renderer {
+    background: transparent !important;
+}
+
+.o_kanban_record {
+    @include glass-card($glass-blur-sm, 0.55, 10px);
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    margin-bottom: 2px !important;
+    margin-top: 0 !important;
+    padding: 6px !important;
+}
+
+.o_kanban_header {
+    @include glass-panel($glass-blur-sm, 0.4);
+    border-radius: 10px 10px 0 0;
+    border: none;
+    border-bottom: 1px solid rgba(99, 102, 241, 0.08);
+}
+
+.o_kanban_group {
+    background: rgba(255, 255, 255, 0.25) !important;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 0 6px 6px !important;
+}
+
+.o_kanban_quick_create {
+    @include glass-card($glass-blur-md, 0.70, 10px);
+    border: 1px solid rgba(99, 102, 241, 0.15) !important;
+}
+
+// Kanban ungrouped
+.o_kanban_renderer:not(.o_kanban_grouped) {
+    .o_kanban_record {
+        @include glass-card($glass-blur-sm, 0.55, 10px);
+    }
+}

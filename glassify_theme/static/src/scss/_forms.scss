@@ -1,0 +1,86 @@
+// ============================================================
+// Glassify - Form Views
+// ============================================================
+
+.o_form_sheet_bg {
+    background: transparent !important;
+}
+
+.o_form_sheet {
+    @include glass-card($glass-blur-lg, 0.70, 14px);
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    position: relative;
+    overflow: visible;
+
+    @include glass-refraction(145deg);
+}
+
+.o_form_statusbar {
+    @include glass-panel($glass-blur-sm, 0.45);
+    border: none;
+    border-bottom: 1px solid rgba(99, 102, 241, 0.08);
+    border-radius: 14px 14px 0 0;
+
+    .o_arrow_button {
+        border-radius: 8px;
+    }
+
+    .o_statusbar_status {
+        .btn {
+            border-radius: 8px;
+        }
+    }
+}
+
+// -- Input fields --
+.o_field_widget {
+    input.o_input,
+    textarea.o_input,
+    select.o_input,
+    .o_input {
+        background: rgba(255, 255, 255, 0.5);
+        border: 1px solid rgba(99, 102, 241, 0.12);
+        border-radius: 8px;
+        transition: border-color 0.2s ease, box-shadow 0.2s ease;
+
+        &:focus {
+            border-color: rgba(99, 102, 241, 0.4);
+            box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.08);
+            background: rgba(255, 255, 255, 0.7);
+        }
+    }
+}
+
+// -- Notebook tabs --
+.o_notebook {
+    > .nav-tabs {
+        border-bottom: 1px solid rgba(99, 102, 241, 0.1);
+
+        .nav-link {
+            border-radius: 8px 8px 0 0;
+            transition: background-color 0.2s ease;
+
+            &.active {
+                background: rgba(255, 255, 255, 0.6);
+                border-color: rgba(99, 102, 241, 0.1);
+                border-bottom-color: transparent;
+                color: $o-brand-primary;
+                font-weight: 500;
+            }
+
+            &:hover:not(.active) {
+                background: rgba(255, 255, 255, 0.3);
+            }
+        }
+    }
+}
+
+// -- Chatter --
+.o-mail-Chatter {
+    .o-mail-Thread {
+        .o-mail-Message {
+            border-radius: 10px;
+            margin-bottom: 4px;
+        }
+    }
+}

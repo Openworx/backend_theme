@@ -1,0 +1,54 @@
+// ============================================================
+// Glassify - Variable Overrides
+// Loaded in web._assets_primary_variables AFTER web_responsive
+// ============================================================
+
+// -- Brand Colors --
+$o-brand-primary: #6366f1;
+$o-brand-secondary: #94a3b8;
+$o-brand-lightsecondary: #f0f4ff;
+$o-brand-odoo: #6366f1;
+
+// -- Text Colors --
+$o-main-text-color: #334155;
+$o-main-headings-color: #1e293b;
+$o-main-link-color: #4f46e5;
+
+// -- View Background --
+$o-view-background-color: #f0f4ff;
+
+// -- Gray Scale (Slate) --
+$o-gray-100: #f1f5f9;
+$o-gray-200: #e2e8f0;
+$o-gray-300: #cbd5e1;
+$o-gray-400: #94a3b8;
+$o-gray-500: #64748b;
+$o-gray-600: #475569;
+$o-gray-700: #334155;
+$o-gray-800: #1e293b;
+$o-gray-900: #0f172a;
+
+// -- Border Radius --
+$o-border-radius: 10px;
+$o-border-radius-sm: 8px;
+$o-border-radius-lg: 14px;
+
+// -- Typography --
+$o-font-family-sans-serif: "Inter", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+// -- Navbar Colors (dark text on glass) --
+$o-navbar-color: #334155;
+$o-navbar-brand-color: #6366f1;
+
+// -- web_responsive overrides --
+$app-menu-text-color: #334155;
+$app-menu-background-color: rgba(224, 228, 255, 0.85);
+$app-menu-item-highlight: rgba(255, 255, 255, 0.6);
+$app-menu-box-shadow:
+    inset 0 0 0 1px rgba(99, 102, 241, 0.12),
+    0 4px 16px rgba(0, 0, 0, 0.04),
+    0 8px 32px rgba(0, 0, 0, 0.02);
+$app-menu-box-shadow-highlight:
+    inset 0 0 0 1px rgba(99, 102, 241, 0.25),
+    0 8px 32px rgba(0, 0, 0, 0.06);

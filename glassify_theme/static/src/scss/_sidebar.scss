@@ -1,0 +1,41 @@
+// ============================================================
+// Glassify - Sidebar & Dropdowns
+// ============================================================
+
+.dropdown-menu {
+    @include glass-panel($glass-blur-md, 0.85);
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    border-radius: 10px !important;
+    box-shadow:
+        0 8px 32px rgba(0, 0, 0, 0.08),
+        0 2px 8px rgba(0, 0, 0, 0.04);
+    overflow: hidden;
+
+    .dropdown-item {
+        border-radius: 6px;
+        margin: 2px 4px;
+        transition: background-color 0.15s ease;
+
+        &:hover,
+        &:focus {
+            background: rgba(99, 102, 241, 0.08);
+        }
+        &.active,
+        &:active {
+            background: rgba(99, 102, 241, 0.15);
+            color: $o-brand-primary;
+        }
+    }
+
+    .dropdown-divider {
+        border-color: rgba(99, 102, 241, 0.08);
+    }
+}
+
+// Settings sidebar
+.o_base_settings {
+    .o_base_settings_sidebar {
+        @include glass-panel($glass-blur-md, 0.60);
+        border-right: 1px solid rgba(255, 255, 255, 0.2);
+    }
+}

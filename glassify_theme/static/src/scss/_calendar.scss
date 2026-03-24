@@ -1,0 +1,34 @@
+// ============================================================
+// Calendar View - Full height layout
+// ============================================================
+
+.o_action_manager > .o_calendar_view {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .o_content {
+        flex: 1 1 0;
+        overflow: hidden;
+    }
+
+    .o_calendar_container {
+        height: 100%;
+    }
+
+    .o_calendar_renderer {
+        height: 100%;
+    }
+
+    .o_calendar_widget {
+        height: 100%;
+
+        .fc {
+            height: 100%;
+
+            .fc-view-harness {
+                height: 100% !important;
+            }
+        }
+    }
+}

@@ -1,0 +1,235 @@
+// ============================================================
+// Glassify - Sidebar App Menu
+// ============================================================
+
+// -- Dimensions --
+$lg-sidebar-rail-width: 56px;
+$lg-sidebar-submenu-width: 220px;
+$lg-sidebar-transition: 0.25s ease;
+
+// -- Main flex container (sidebar + action manager) --
+.lg_main_container {
+    flex: 1 1 auto;
+    height: 100%;
+    overflow: hidden;
+
+    > .o_action_manager {
+        flex: 1 1 auto;
+        min-width: 0;
+        height: 100%;
+        overflow: auto;
+    }
+}
+
+// -- Hide navbar elements (sidebar replaces them) --
+.o_main_navbar {
+    .o_menu_toggle,
+    .o_navbar_apps_menu {
+        display: none !important;
+    }
+
+    // Compensate for hidden hamburger icon
+    padding-left: 12px;
+}
+
+@media (min-width: 768px) {
+    .o_main_navbar {
+        .o_menu_sections {
+            display: none !important;
+        }
+        .o_menu_brand {
+            display: none !important;
+        }
+    }
+}
+
+// -- Sidebar container --
+.lg_sidebar {
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    z-index: 10;
+    position: relative;
+    overflow: hidden; // Clip box-shadows from bleeding into content area
+}
+
+// -- Icon Rail (left strip) --
+.lg_sidebar__rail {
+    @include glass-panel($glass-blur-lg, 0.78);
+    width: $lg-sidebar-rail-width;
+    flex: 0 0 $lg-sidebar-rail-width;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8px 0;
+    gap: 2px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    border-right: 1px solid rgba(255, 255, 255, 0.15);
+    position: relative;
+
+    @include glass-refraction(180deg);
+
+    &::-webkit-scrollbar {
+        width: 3px;
+    }
+    &::-webkit-scrollbar-thumb {
+        background: rgba(99, 102, 241, 0.2);
+        border-radius: 2px;
+    }
+}
+
+// -- App icon button --
+.lg_sidebar__app-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+    padding: 3px;
+    transition: all 0.2s ease;
+    position: relative;
+    text-decoration: none;
+    flex-shrink: 0;
+
+    &:hover {
+        background: rgba(99, 102, 241, 0.10);
+        transform: scale(1.08);
+    }
+
+    &.active {
+        @include glass-glow-border(rgba(99, 102, 241, 0.25), 2px);
+        background: rgba(99, 102, 241, 0.12);
+
+        // Active indicator bar on left edge
+        &::before {
+            content: "";
+            position: absolute;
+            left: -4px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 3px;
+            height: 20px;
+            background: #6366f1;
+            border-radius: 0 3px 3px 0;
+        }
+    }
+}
+
+.lg_sidebar__app-img {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    object-fit: cover;
+    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.08));
+}
+
+// -- Submenu Panel --
+.lg_sidebar__submenu {
+    @include glass-panel($glass-blur-md, 0.65);
+    width: $lg-sidebar-submenu-width;
+    flex: 0 0 $lg-sidebar-submenu-width;
+    display: flex;
+    flex-direction: column;
+    border-right: none;
+    overflow: hidden;
+    box-shadow: none;
+}
+
+.lg_sidebar__submenu-header {
+    display: flex;
+    align-items: center;
+    padding: 12px 12px 8px;
+    border-bottom: 1px solid rgba(99, 102, 241, 0.08);
+    flex-shrink: 0;
+}
+
+.lg_sidebar__submenu-title {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #1e293b;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+// -- Toggle button --
+.lg_sidebar__toggle-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(99, 102, 241, 0.06);
+    color: #64748b;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    flex-shrink: 0;
+    font-size: 0.75rem;
+    padding: 0;
+
+    &:hover {
+        background: rgba(99, 102, 241, 0.12);
+        color: #6366f1;
+        border-color: rgba(99, 102, 241, 0.2);
+    }
+}
+
+// In the rail (collapsed state): pin to top
+.lg_sidebar__rail > .lg_sidebar__toggle-btn {
+    margin-top: 0;
+    margin-bottom: 4px;
+}
+
+// -- Submenu Navigation --
+.lg_sidebar__submenu-nav {
+    flex: 1 1 auto;
+    overflow-y: auto;
+    padding: 8px 0;
+
+    &::-webkit-scrollbar {
+        width: 4px;
+    }
+    &::-webkit-scrollbar-thumb {
+        background: rgba(99, 102, 241, 0.15);
+        border-radius: 2px;
+    }
+}
+
+.lg_sidebar__menu-link {
+    display: block;
+    padding: 6px 12px;
+    color: #334155;
+    text-decoration: none;
+    font-size: 0.85rem;
+    border-radius: 6px;
+    margin: 1px 6px;
+    transition: background-color 0.15s ease, color 0.15s ease;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    &:hover {
+        background: rgba(99, 102, 241, 0.08);
+        color: #6366f1;
+        text-decoration: none;
+    }
+}
+
+.lg_sidebar__menu-group {
+    margin-top: 4px;
+}
+
+.lg_sidebar__menu-group-title {
+    display: block;
+    padding: 8px 12px 4px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #94a3b8;
+}

@@ -1,0 +1,54 @@
+// ============================================================
+// Glassify - Modals
+// ============================================================
+
+.modal-backdrop {
+    background: rgba(15, 23, 42, 0.3) !important;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+}
+
+.modal-content {
+    background: #f0f4ff !important;
+    backdrop-filter: blur($glass-blur-xl) saturate(1.4);
+    -webkit-backdrop-filter: blur($glass-blur-xl) saturate(1.4);
+    border: 1px solid rgba(255, 255, 255, 0.25) !important;
+    border-radius: 16px;
+    position: relative;
+    overflow: hidden;
+    box-shadow:
+        0 24px 80px rgba(0, 0, 0, 0.12),
+        0 8px 24px rgba(0, 0, 0, 0.06),
+        inset 0 1px 0 rgba(white, 0.5);
+
+    .modal-header {
+        border-bottom: 1px solid rgba(99, 102, 241, 0.1);
+        background: transparent;
+    }
+
+    .modal-footer {
+        border-top: 1px solid rgba(99, 102, 241, 0.1);
+        background: transparent;
+    }
+
+    .modal-body {
+        background: transparent !important;
+    }
+
+    // Neutralize nested glass layers inside modals
+    .o_form_sheet {
+        background: transparent !important;
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
+        box-shadow: none !important;
+        border: none !important;
+
+        &::before {
+            display: none;
+        }
+    }
+
+    .o_form_sheet_bg {
+        background: transparent !important;
+    }
+}

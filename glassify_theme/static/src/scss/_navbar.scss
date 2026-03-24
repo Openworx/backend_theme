@@ -1,0 +1,96 @@
+// ============================================================
+// Glassify - Navbar
+// ============================================================
+
+.o_main_navbar {
+    @include glass-bar($glass-blur-lg, 0.72);
+    position: relative;
+    color: #334155 !important;
+
+    @include glass-refraction(90deg);
+
+    // -- Force all navbar text & icons to dark --
+    a, button, .btn, span, i, .fa {
+        color: inherit;
+    }
+
+    .o_menu_brand {
+        color: $o-brand-primary !important;
+        font-weight: 600;
+    }
+
+    .o_nav_entry,
+    .dropdown-toggle {
+        color: #334155 !important;
+        border-radius: 8px;
+        transition: background-color 0.2s ease, color 0.2s ease;
+
+        &:hover,
+        &:focus {
+            color: #6366f1 !important;
+            background: rgba(99, 102, 241, 0.08);
+        }
+    }
+
+    .o_menu_sections {
+        .o_nav_entry {
+            &.active {
+                background: rgba(99, 102, 241, 0.12);
+                color: $o-brand-primary !important;
+            }
+        }
+    }
+
+    .o_menu_systray {
+        color: #334155 !important;
+
+        .dropdown-toggle {
+            color: #475569 !important;
+            border-radius: 8px;
+
+            &:hover {
+                color: #6366f1 !important;
+            }
+        }
+
+        .o_notification_counter {
+            color: white !important;
+        }
+
+        // -- Red notification badges --
+        .badge {
+            background-color: #dc2626 !important;
+            color: white !important;
+            font-weight: 600;
+            font-size: 0.7rem;
+            min-width: 18px;
+            height: 18px;
+            line-height: 18px;
+            padding: 0 5px;
+            box-shadow: 0 2px 6px rgba(220, 38, 38, 0.35);
+        }
+    }
+
+    // -- Apps menu hamburger icon --
+    .o_menu_toggle {
+        color: #334155 !important;
+
+        &:hover {
+            color: #6366f1 !important;
+        }
+    }
+
+    // -- Company logo (desktop only) --
+    .lg_navbar_logo {
+        align-items: center;
+        order: -1;
+        margin-right: 12px;
+        padding: 2px 0;
+
+        img {
+            height: 30px;
+            width: auto;
+            object-fit: contain;
+        }
+    }
+}

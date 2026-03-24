@@ -1,0 +1,48 @@
+// ============================================================
+// Glassify Theme - Main Styles
+// ============================================================
+
+// -- Root gradient background (visible through glass panels) --
+.o_web_client {
+    background:
+        linear-gradient(
+            135deg,
+            #e0e7ff 0%,
+            #f0f4ff 25%,
+            #f8fafc 50%,
+            #ede9fe 75%,
+            #e0e7ff 100%
+        ) !important;
+    background-attachment: fixed !important;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+// -- Action manager: transparent to show gradient --
+.o_action_manager {
+    background: transparent !important;
+}
+
+.o_content {
+    background: transparent !important;
+}
+
+// -- Custom scrollbar --
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(99, 102, 241, 0.25);
+    border-radius: 4px;
+
+    &:hover {
+        background: rgba(99, 102, 241, 0.4);
+    }
+}
+

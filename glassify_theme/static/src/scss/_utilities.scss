@@ -1,0 +1,104 @@
+// ============================================================
+// Glassify - Utilities, Buttons & Global Overrides
+// ============================================================
+
+// -- Utility classes --
+.glass-light {
+    @include glass-panel($glass-blur-sm, $glass-bg-opacity-light);
+}
+
+.glass-medium {
+    @include glass-panel($glass-blur-md, $glass-bg-opacity-medium);
+}
+
+.glass-heavy {
+    @include glass-panel($glass-blur-lg, $glass-bg-opacity-heavy);
+}
+
+// -- Shimmer animation --
+@keyframes glass-shimmer {
+    0% { background-position: -200% center; }
+    100% { background-position: 200% center; }
+}
+
+.glass-shimmer {
+    position: relative;
+    overflow: hidden;
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(
+            90deg,
+            transparent 0%,
+            rgba(255, 255, 255, 0.15) 50%,
+            transparent 100%
+        );
+        background-size: 200% 100%;
+        animation: glass-shimmer 8s ease-in-out infinite;
+        pointer-events: none;
+        z-index: 2;
+    }
+}
+
+// -- Focus ring --
+*:focus-visible {
+    outline: 2px solid rgba(99, 102, 241, 0.5) !important;
+    outline-offset: 2px;
+}
+
+// -- Primary button: gradient --
+.btn-primary,
+.btn-link.btn-primary {
+    color: #fff !important;
+    background: linear-gradient(135deg, #6366f1, #4f46e5) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    box-shadow:
+        0 2px 8px rgba(99, 102, 241, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    transition: all 0.2s ease;
+
+    &:hover,
+    &:focus {
+        color: #fff !important;
+        background: linear-gradient(135deg, #4f46e5, #4338ca) !important;
+        box-shadow:
+            0 4px 16px rgba(99, 102, 241, 0.4),
+            inset 0 1px 0 rgba(255, 255, 255, 0.25);
+    }
+
+    &:active {
+        background: linear-gradient(135deg, #4338ca, #3730a3) !important;
+    }
+}
+
+// -- Secondary/Light buttons: glass look --
+.btn-secondary,
+.btn-light {
+    @include glass-panel($glass-blur-sm, 0.5);
+    color: $o-main-text-color;
+    border-radius: 8px;
+
+    &:hover {
+        background: rgba(255, 255, 255, 0.7);
+    }
+}
+
+// -- Badges --
+.badge {
+    border-radius: 6px;
+}
+
+// -- Tooltips --
+.tooltip {
+    .tooltip-inner {
+        @include glass-panel($glass-blur-md, 0.85);
+        border-radius: 8px;
+        color: $o-main-text-color;
+    }
+}

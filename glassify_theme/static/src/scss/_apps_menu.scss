@@ -1,0 +1,55 @@
+// ============================================================
+// Glassify - Apps Menu (web_responsive)
+// ============================================================
+
+.app-menu-container {
+    background:
+        linear-gradient(
+            135deg,
+            rgba(224, 231, 255, 0.90) 0%,
+            rgba(237, 233, 254, 0.90) 50%,
+            rgba(224, 231, 255, 0.90) 100%
+        ) !important;
+    backdrop-filter: blur($glass-blur-xl) saturate(1.5) !important;
+    -webkit-backdrop-filter: blur($glass-blur-xl) saturate(1.5) !important;
+    background-image: none !important;
+}
+
+.o_apps_menu_item,
+.o_grid_apps_menu_item {
+    @include glass-card($glass-blur-sm, 0.50, 10px);
+    padding: 12px 8px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+
+    .o_app_icon {
+        filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+    }
+
+    .o_app_name {
+        color: $app-menu-text-color;
+        font-weight: 500;
+        margin-top: 8px;
+    }
+
+    &:hover {
+        background: rgba(255, 255, 255, 0.7);
+        border-color: rgba(99, 102, 241, 0.15);
+    }
+}
+
+// Search bar within apps menu
+.o_apps_search_container,
+.o_apps_menu_searchbar {
+    input {
+        @include glass-panel($glass-blur-sm, 0.5);
+        border-radius: 12px !important;
+        border: 1px solid rgba(99, 102, 241, 0.15) !important;
+        padding: 10px 16px;
+
+        &:focus {
+            border-color: rgba(99, 102, 241, 0.35) !important;
+            box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+        }
+    }
+}
